@@ -8,4 +8,4 @@ xgols - the Go/XGo Language Server
 
 ## How to install
 
-`gop install github.com/goplus/xgols@latest`
+`xgo install github.com/goplus/xgols@latest`
