@@ -4,7 +4,7 @@ xgols - the Go/XGo Language Server
 [![GitHub release](https://img.shields.io/github/v/tag/goplus/xgols.svg?label=release)](https://github.com/goplus/xgols/releases)
 [![Language](https://img.shields.io/badge/language-XGo-blue.svg)](https://github.com/goplus/xgo)
 
-`xgols` is a language-server protocol (LSP) server for Go/Go+. An LSP server analyses the source code of a project and responds to requests from a wide range of editors such as VSCode and Vim, allowing them to support IDE-like functionality.
+`xgols` is a language-server protocol (LSP) server for Go/XGo. An LSP server analyses the source code of a project and responds to requests from a wide range of editors such as VSCode and Vim, allowing them to support IDE-like functionality.
 
 ## How to install
 
