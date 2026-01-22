@@ -1,6 +1,6 @@
 module github.com/goplus/xgols
 
-go 1.18
+go 1.19
 
 require golang.org/x/tools/gopls v0.14.1
 
