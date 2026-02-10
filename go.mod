@@ -7,9 +7,9 @@ require golang.org/x/tools/gopls v0.14.1
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
-	github.com/goplus/gogen v1.20.2 // indirect
+	github.com/goplus/gogen v1.20.8 // indirect
 	github.com/goplus/mod v0.19.0 // indirect
-	github.com/goplus/xgo v1.6.0 // indirect
+	github.com/goplus/xgo v1.6.2 // indirect
 	github.com/qiniu/x v1.16.0 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
 	golang.org/x/exp v0.0.0-20220722155223-a9213eeb770e // indirect
@@ -26,6 +26,6 @@ require (
 )
 
 replace (
-	golang.org/x/tools => github.com/goplus/tools v0.13.9
-	golang.org/x/tools/gopls => github.com/goplus/tools/gopls v0.0.0-20260120115204-7efc254818b5
+	golang.org/x/tools => github.com/goplus/tools v0.13.10-0.20260210034941-dacbd6e9b540
+	golang.org/x/tools/gopls => github.com/goplus/tools/gopls v0.0.0-20260209030534-0404ca543eff
 )
