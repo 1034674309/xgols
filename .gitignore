@@ -17,6 +17,9 @@
 # GoReleaser output
 dist/
 
+# Prepared only while building a bundled release archive.
+.runtime/
+
 # Dependency directories (remove the comment below to include it)
 # vendor/
 

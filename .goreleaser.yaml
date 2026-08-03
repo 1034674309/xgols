@@ -1,5 +1,9 @@
 version: 2
 
+before:
+  hooks:
+    - go run ./cmd/prepare-xgo-runtime
+
 builds:
   - id: xgols
     main: .
@@ -17,10 +21,45 @@ builds:
     goarch:
       - amd64
       - arm64
+  - id: xgo-runtime
+    dir: .runtime/xgo
+    main: ./cmd/xgo
+    binary: xgo
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+  - id: xgols-zed
+    main: ./cmd/xgols-zed
+    binary: xgols-zed
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
 
 archives:
   - ids:
       - xgols
+      - xgo-runtime
+      - xgols-zed
     formats:
       - tar.gz
     format_overrides:
@@ -31,6 +70,17 @@ archives:
     files:
       - LICENSE
       - README.md
+      - src: .runtime/xgo/**/*
+        dst: xgo-runtime
+      - src: .runtime/xgo/go.mod
+        dst: xgo-runtime
+        strip_parent: true
+      - src: .runtime/xgo/go.sum
+        dst: xgo-runtime
+        strip_parent: true
+      - src: .runtime/xgo/VERSION
+        dst: xgo-runtime
+        strip_parent: true
 
 checksum:
   name_template: checksums.txt
