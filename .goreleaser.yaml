@@ -38,28 +38,11 @@ builds:
     goarch:
       - amd64
       - arm64
-  - id: xgols-zed
-    main: ./cmd/xgols-zed
-    binary: xgols-zed
-    flags:
-      - -trimpath
-    ldflags:
-      - -s -w
-    env:
-      - CGO_ENABLED=0
-    goos:
-      - darwin
-      - linux
-      - windows
-    goarch:
-      - amd64
-      - arm64
 
 archives:
   - ids:
       - xgols
       - xgo-runtime
-      - xgols-zed
     formats:
       - tar.gz
     format_overrides:
