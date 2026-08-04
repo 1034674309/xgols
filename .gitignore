@@ -17,9 +17,6 @@
 # GoReleaser output
 dist/
 
-# Prepared only while building a release archive.
-.release/
-
 # Dependency directories (remove the comment below to include it)
 # vendor/
 

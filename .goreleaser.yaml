@@ -1,9 +1,5 @@
 version: 2
 
-before:
-  hooks:
-    - go run ./cmd/prepare-release-metadata
-
 builds:
   - id: xgols
     main: .
@@ -21,6 +17,7 @@ builds:
     goarch:
       - amd64
       - arm64
+
 archives:
   - ids:
       - xgols
@@ -34,9 +31,7 @@ archives:
     files:
       - LICENSE
       - README.md
-      - src: .release/xgo-version
-        dst: .
-        strip_parent: true
+      - go.mod
 
 checksum:
   name_template: checksums.txt
